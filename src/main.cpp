@@ -30,7 +30,6 @@ using namespace px4_msgs::msg;
 using std::placeholders::_1;
 
 
-
 class WaypointNav : public rclcpp::Node
 {
     public:
@@ -96,7 +95,8 @@ class WaypointNav : public rclcpp::Node
 		void goal_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg);
 		void lidar_pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
 
-		std::array<float, 3> waypoint = {0.0, 0.0, -0.5};
+		std::array<float,3> waypoint_pos = {0,0,-0.6};
+		float waypoint_yaw;
 };
 
 void WaypointNav::arm()
@@ -139,8 +139,8 @@ void WaypointNav::publish_offboard_control_mode()
 void WaypointNav::publish_trajectory_setpoint()
 {
 	TrajectorySetpoint msg{};
-	msg.position = waypoint;
-	// msg.yaw = -3.14; // [-PI:PI]
+	msg.position = waypoint_pos;
+	msg.yaw = waypoint_yaw; // [-PI:PI]
 	msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
 	trajectory_setpoint_publisher_->publish(msg);
 }
@@ -168,7 +168,7 @@ void WaypointNav::publish_vehicle_command(uint16_t command, float param1, float 
 
 void WaypointNav::goal_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg)
 {
-	waypoint = {msg->pose.position.y, msg->pose.position.x, -0.8};
+	waypoint_pos = {msg->pose.position.y, msg->pose.position.x, -0.6};
 }
 
 void WaypointNav::lidar_pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
@@ -218,6 +218,10 @@ void WaypointNav::lidar_pose_callback(const nav_msgs::msg::Odometry::SharedPtr m
 
 	odom_msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
 	odometry_publisher_->publish(odom_msg);
+
+	if(fabs(waypoint_pos[0] - odom_msg.position[0]) > 0.5){
+		waypoint_yaw = atan2(waypoint_pos[1] - odom_msg.position[1], waypoint_pos[0] - odom_msg.position[0]);
+	}
 }
 
 int main(int argc, char *argv[])
