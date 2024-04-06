@@ -40,7 +40,7 @@ class WaypointNav : public rclcpp::Node
             vehicle_command_publisher_ = this->create_publisher<VehicleCommand>("/fmu/in/vehicle_command", 10);
 			odometry_publisher_ = this->create_publisher<VehicleOdometry>("/fmu/in/vehicle_visual_odometry", 10);
 			goal_subscription_ = this->create_subscription<geometry_msgs::msg::PoseStamped>("/goal_pose",10,std::bind(&WaypointNav::goal_callback, this, _1));
-			lidar_odom_subscription_ = this->create_subscription<nav_msgs::msg::Odometry>("/nav/odom_incremental",
+			lidar_odom_subscription_ = this->create_subscription<nav_msgs::msg::Odometry>("/odometry/imu",
 				rclcpp::QoS(rclcpp::KeepLast(1)).best_effort().durability_volatile(),
 				std::bind(&WaypointNav::lidar_pose_callback, this, _1)
 			);
@@ -187,7 +187,7 @@ void WaypointNav::lidar_pose_callback(const nav_msgs::msg::Odometry::SharedPtr m
 
 	Eigen::Matrix3f m1;
 	m1(0,1) = 1;
-	m1(1,0) = 1;
+	m1(1,0) = -1;
 	m1(2,2) = -1;
 
 	Eigen::Matrix3f m3;
