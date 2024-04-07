@@ -1,0 +1,176 @@
+[0.000000] (-) TimerEvent: {}
+[0.000249] (waypoint_nav) JobQueued: {'identifier': 'waypoint_nav', 'dependencies': OrderedDict()}
+[0.001188] (waypoint_nav) JobStarted: {'identifier': 'waypoint_nav'}
+[0.054774] (waypoint_nav) JobProgress: {'identifier': 'waypoint_nav', 'progress': 'cmake'}
+[0.055720] (waypoint_nav) JobProgress: {'identifier': 'waypoint_nav', 'progress': 'build'}
+[0.055847] (waypoint_nav) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav', '--', '-j8', '-l8'], 'cwd': '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav', 'env': OrderedDict([('USER', 'sundharvs'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/sundharvs'), ('OLDPWD', '/home/sundharvs/nist_slam_ws'), ('LESS', '-R'), ('DESKTOP_SESSION', 'gnome'), ('ZSH', '/home/sundharvs/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('MDF_PATH', '/home/sundharvs/esp/esp-mdf'), ('SYSTEMD_EXEC_PID', '4807'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/gnome.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'sundharvs'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/gnome.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'sundharvs'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('IDF_PATH', '/home/sundharvs/esp/esp-idf'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/lib/ccache:/home/sundharvs/git/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/sundharvs/.local/bin:/home/sundharvs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/sundharvs-laptop:@/tmp/.ICE-unix/2022,unix/sundharvs-laptop:/tmp/.ICE-unix/2022'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e4568b44_d06f_4f27_92a3_2fc9c9c130c8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('XDG_CURRENT_DESKTOP', 'GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'gnome'), ('GNOME_TERMINAL_SERVICE', ':1.93'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'gnome'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-gnome:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/sundharvs/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.088636] (waypoint_nav) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target nav\x1b[0m\n'}
+[0.099746] (-) TimerEvent: {}
+[0.105575] (waypoint_nav) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/nav.dir/src/main.cpp.o\x1b[0m\n'}
+[0.199922] (-) TimerEvent: {}
+[0.300183] (-) TimerEvent: {}
+[0.400458] (-) TimerEvent: {}
+[0.500761] (-) TimerEvent: {}
+[0.601137] (-) TimerEvent: {}
+[0.701424] (-) TimerEvent: {}
+[0.801733] (-) TimerEvent: {}
+[0.902039] (-) TimerEvent: {}
+[1.002323] (-) TimerEvent: {}
+[1.102664] (-) TimerEvent: {}
+[1.202946] (-) TimerEvent: {}
+[1.303223] (-) TimerEvent: {}
+[1.403503] (-) TimerEvent: {}
+[1.503797] (-) TimerEvent: {}
+[1.604162] (-) TimerEvent: {}
+[1.704580] (-) TimerEvent: {}
+[1.804859] (-) TimerEvent: {}
+[1.905162] (-) TimerEvent: {}
+[2.005483] (-) TimerEvent: {}
+[2.105820] (-) TimerEvent: {}
+[2.206151] (-) TimerEvent: {}
+[2.306489] (-) TimerEvent: {}
+[2.406821] (-) TimerEvent: {}
+[2.507153] (-) TimerEvent: {}
+[2.607494] (-) TimerEvent: {}
+[2.707766] (-) TimerEvent: {}
+[2.808061] (-) TimerEvent: {}
+[2.908400] (-) TimerEvent: {}
+[3.008660] (-) TimerEvent: {}
+[3.108989] (-) TimerEvent: {}
+[3.209274] (-) TimerEvent: {}
+[3.309595] (-) TimerEvent: {}
+[3.409950] (-) TimerEvent: {}
+[3.510257] (-) TimerEvent: {}
+[3.610585] (-) TimerEvent: {}
+[3.710864] (-) TimerEvent: {}
+[3.811185] (-) TimerEvent: {}
+[3.911464] (-) TimerEvent: {}
+[4.011814] (-) TimerEvent: {}
+[4.112114] (-) TimerEvent: {}
+[4.212396] (-) TimerEvent: {}
+[4.312758] (-) TimerEvent: {}
+[4.413050] (-) TimerEvent: {}
+[4.513373] (-) TimerEvent: {}
+[4.613673] (-) TimerEvent: {}
+[4.714001] (-) TimerEvent: {}
+[4.814343] (-) TimerEvent: {}
+[4.914683] (-) TimerEvent: {}
+[5.015006] (-) TimerEvent: {}
+[5.115306] (-) TimerEvent: {}
+[5.215647] (-) TimerEvent: {}
+[5.315980] (-) TimerEvent: {}
+[5.416220] (-) TimerEvent: {}
+[5.516528] (-) TimerEvent: {}
+[5.616836] (-) TimerEvent: {}
+[5.717216] (-) TimerEvent: {}
+[5.817585] (-) TimerEvent: {}
+[5.917908] (-) TimerEvent: {}
+[6.018246] (-) TimerEvent: {}
+[6.118573] (-) TimerEvent: {}
+[6.218867] (-) TimerEvent: {}
+[6.319190] (-) TimerEvent: {}
+[6.419510] (-) TimerEvent: {}
+[6.519836] (-) TimerEvent: {}
+[6.620186] (-) TimerEvent: {}
+[6.720555] (-) TimerEvent: {}
+[6.820917] (-) TimerEvent: {}
+[6.921249] (-) TimerEvent: {}
+[7.021579] (-) TimerEvent: {}
+[7.121948] (-) TimerEvent: {}
+[7.222348] (-) TimerEvent: {}
+[7.322715] (-) TimerEvent: {}
+[7.423100] (-) TimerEvent: {}
+[7.523444] (-) TimerEvent: {}
+[7.623782] (-) TimerEvent: {}
+[7.724081] (-) TimerEvent: {}
+[7.824442] (-) TimerEvent: {}
+[7.924754] (-) TimerEvent: {}
+[8.025058] (-) TimerEvent: {}
+[8.125444] (-) TimerEvent: {}
+[8.225793] (-) TimerEvent: {}
+[8.326199] (-) TimerEvent: {}
+[8.426529] (-) TimerEvent: {}
+[8.526972] (-) TimerEvent: {}
+[8.627317] (-) TimerEvent: {}
+[8.727670] (-) TimerEvent: {}
+[8.828018] (-) TimerEvent: {}
+[8.928272] (-) TimerEvent: {}
+[9.028550] (-) TimerEvent: {}
+[9.128944] (-) TimerEvent: {}
+[9.229260] (-) TimerEvent: {}
+[9.329617] (-) TimerEvent: {}
+[9.430017] (-) TimerEvent: {}
+[9.530324] (-) TimerEvent: {}
+[9.630629] (-) TimerEvent: {}
+[9.730930] (-) TimerEvent: {}
+[9.831288] (-) TimerEvent: {}
+[9.931592] (-) TimerEvent: {}
+[10.031876] (-) TimerEvent: {}
+[10.132138] (-) TimerEvent: {}
+[10.232448] (-) TimerEvent: {}
+[10.332729] (-) TimerEvent: {}
+[10.433010] (-) TimerEvent: {}
+[10.533333] (-) TimerEvent: {}
+[10.633671] (-) TimerEvent: {}
+[10.734015] (-) TimerEvent: {}
+[10.834366] (-) TimerEvent: {}
+[10.934698] (-) TimerEvent: {}
+[11.035026] (-) TimerEvent: {}
+[11.135351] (-) TimerEvent: {}
+[11.235648] (-) TimerEvent: {}
+[11.335940] (-) TimerEvent: {}
+[11.436241] (-) TimerEvent: {}
+[11.536518] (-) TimerEvent: {}
+[11.636817] (-) TimerEvent: {}
+[11.737179] (-) TimerEvent: {}
+[11.837621] (-) TimerEvent: {}
+[11.937903] (-) TimerEvent: {}
+[12.038215] (-) TimerEvent: {}
+[12.138680] (-) TimerEvent: {}
+[12.239036] (-) TimerEvent: {}
+[12.339376] (-) TimerEvent: {}
+[12.439667] (-) TimerEvent: {}
+[12.540028] (-) TimerEvent: {}
+[12.640443] (-) TimerEvent: {}
+[12.740747] (-) TimerEvent: {}
+[12.841021] (-) TimerEvent: {}
+[12.941323] (-) TimerEvent: {}
+[13.041687] (-) TimerEvent: {}
+[13.141946] (-) TimerEvent: {}
+[13.242292] (-) TimerEvent: {}
+[13.342601] (-) TimerEvent: {}
+[13.362690] (waypoint_nav) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable nav\x1b[0m\n'}
+[13.442713] (-) TimerEvent: {}
+[13.543066] (-) TimerEvent: {}
+[13.643661] (-) TimerEvent: {}
+[13.743992] (-) TimerEvent: {}
+[13.844303] (-) TimerEvent: {}
+[13.944604] (-) TimerEvent: {}
+[14.044892] (-) TimerEvent: {}
+[14.124616] (waypoint_nav) StdoutLine: {'line': b'[100%] Built target nav\n'}
+[14.133212] (waypoint_nav) CommandEnded: {'returncode': 0}
+[14.145093] (-) TimerEvent: {}
+[14.151367] (waypoint_nav) JobProgress: {'identifier': 'waypoint_nav', 'progress': 'install'}
+[14.157825] (waypoint_nav) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav'], 'cwd': '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav', 'env': OrderedDict([('USER', 'sundharvs'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/sundharvs'), ('OLDPWD', '/home/sundharvs/nist_slam_ws'), ('LESS', '-R'), ('DESKTOP_SESSION', 'gnome'), ('ZSH', '/home/sundharvs/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('MDF_PATH', '/home/sundharvs/esp/esp-mdf'), ('SYSTEMD_EXEC_PID', '4807'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/gnome.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'sundharvs'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/gnome.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'sundharvs'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('IDF_PATH', '/home/sundharvs/esp/esp-idf'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/lib/ccache:/home/sundharvs/git/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/sundharvs/.local/bin:/home/sundharvs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/sundharvs-laptop:@/tmp/.ICE-unix/2022,unix/sundharvs-laptop:/tmp/.ICE-unix/2022'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e4568b44_d06f_4f27_92a3_2fc9c9c130c8'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('XDG_CURRENT_DESKTOP', 'GNOME'), ('LANG', 'en_US.UTF-8'), ('XDG_SESSION_DESKTOP', 'gnome'), ('GNOME_TERMINAL_SERVICE', ':1.93'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'gnome'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-gnome:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/sundharvs/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[14.163698] (waypoint_nav) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.163905] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/lib/waypoint_nav/nav\n'}
+[14.169592] (waypoint_nav) StdoutLine: {'line': b'-- Set runtime path of "/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/lib/waypoint_nav/nav" to ""\n'}
+[14.169754] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/ament_index/resource_index/package_run_dependencies/waypoint_nav\n'}
+[14.169812] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/ament_index/resource_index/parent_prefix_path/waypoint_nav\n'}
+[14.169887] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/environment/ament_prefix_path.sh\n'}
+[14.169954] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/environment/ament_prefix_path.dsv\n'}
+[14.170016] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/environment/path.sh\n'}
+[14.170098] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/environment/path.dsv\n'}
+[14.170178] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/local_setup.bash\n'}
+[14.170260] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/local_setup.sh\n'}
+[14.170348] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/local_setup.zsh\n'}
+[14.170430] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/local_setup.dsv\n'}
+[14.170511] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.dsv\n'}
+[14.170642] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/ament_index/resource_index/packages/waypoint_nav\n'}
+[14.170746] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/cmake/waypoint_navConfig.cmake\n'}
+[14.170811] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/cmake/waypoint_navConfig-version.cmake\n'}
+[14.170897] (waypoint_nav) StdoutLine: {'line': b'-- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.xml\n'}
+[14.172313] (waypoint_nav) CommandEnded: {'returncode': 0}
+[14.245174] (-) TimerEvent: {}
+[14.311737] (waypoint_nav) JobEnded: {'identifier': 'waypoint_nav', 'rc': 0}
+[14.312289] (-) EventReactorShutdown: {}

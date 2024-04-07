@@ -1,0 +1,26 @@
+[0.056s] Invoking command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav -- -j8 -l8
+[0.088s] [35m[1mConsolidate compiler generated dependencies of target nav[0m
+[0.105s] [ 50%] [32mBuilding CXX object CMakeFiles/nav.dir/src/main.cpp.o[0m
+[13.362s] [100%] [32m[1mLinking CXX executable nav[0m
+[14.124s] [100%] Built target nav
+[14.132s] Invoked command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav -- -j8 -l8
+[14.157s] Invoking command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav
+[14.163s] -- Install configuration: ""
+[14.163s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/lib/waypoint_nav/nav
+[14.168s] -- Set runtime path of "/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/lib/waypoint_nav/nav" to ""
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/ament_index/resource_index/package_run_dependencies/waypoint_nav
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/ament_index/resource_index/parent_prefix_path/waypoint_nav
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/environment/ament_prefix_path.sh
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/environment/ament_prefix_path.dsv
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/environment/path.sh
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/environment/path.dsv
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/local_setup.bash
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/local_setup.sh
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/local_setup.zsh
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/local_setup.dsv
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.dsv
+[14.169s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/ament_index/resource_index/packages/waypoint_nav
+[14.170s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/cmake/waypoint_navConfig.cmake
+[14.170s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/cmake/waypoint_navConfig-version.cmake
+[14.170s] -- Installing: /home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.xml
+[14.171s] Invoked command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav

@@ -191,7 +191,9 @@ void WaypointNav::lidar_pose_callback(const nav_msgs::msg::Odometry::SharedPtr m
 
 	odom_msg.pose_frame = 2; // 1 for NED earth-fixed frame, 2 for FRD world-fixed frame
 	odom_msg.position = {(float) msg->pose.pose.position.x, (float) -(msg->pose.pose.position.y), (float) -(msg->pose.pose.position.z)};
-	odom_msg.q = {(float) msg->pose.pose.orientation.w, (float) msg->pose.pose.orientation.x, (float) -(msg->pose.pose.orientation.y), (float) -(msg->pose.pose.orientation.z)};
+	Eigen::Quaternionf q((float) msg->pose.pose.orientation.w, (float) msg->pose.pose.orientation.x, (float) -(msg->pose.pose.orientation.y), (float) -(msg->pose.pose.orientation.z));
+	q = Eigen::Quaternionf(0.9848078, 0, -0.1736482, 0) * q;
+	odom_msg.q = {q.w(), q.x(), q.y(), q.z()};
 
 	odom_msg.velocity_frame = 2;
 	odom_msg.velocity = {(float) msg->twist.twist.linear.x,(float) -(msg->twist.twist.linear.y),(float) -(msg->twist.twist.linear.z)};

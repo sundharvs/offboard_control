@@ -1,3 +1,6 @@
+source;share/waypoint_nav/hook/cmake_prefix_path.ps1
+source;share/waypoint_nav/hook/cmake_prefix_path.dsv
+source;share/waypoint_nav/hook/cmake_prefix_path.sh
 source;share/waypoint_nav/local_setup.bash
 source;share/waypoint_nav/local_setup.dsv
 source;share/waypoint_nav/local_setup.ps1

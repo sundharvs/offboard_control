@@ -1,0 +1,4 @@
+Invoking command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav -- -j8 -l8
+Invoked command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav -- -j8 -l8
+Invoking command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav
+Invoked command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav
