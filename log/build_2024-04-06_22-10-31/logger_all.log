@@ -1,0 +1,79 @@
+[1.121s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'waypoint_nav']
+[1.121s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['waypoint_nav'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x789bde81dab0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x789bdeaa1fc0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x789bdeaa1fc0>>)
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.169s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sundharvs/nist_slam_ws/src/waypoint_nav'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.169s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.181s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'waypoint_nav'
+[1.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.318s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 17 installed packages in /home/sundharvs/nist_slam_ws/install
+[1.335s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 297 installed packages in /opt/ros/humble
+[1.336s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.418s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_args' from command line to 'None'
+[1.418s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_target' from command line to 'None'
+[1.419s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.419s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_clean_cache' from command line to 'False'
+[1.419s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_clean_first' from command line to 'False'
+[1.419s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'cmake_force_configure' from command line to 'False'
+[1.419s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'ament_cmake_args' from command line to 'None'
+[1.419s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'catkin_cmake_args' from command line to 'None'
+[1.419s] Level 5:colcon.colcon_core.verb:set package 'waypoint_nav' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.419s] DEBUG:colcon.colcon_core.verb:Building package 'waypoint_nav' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav', 'merge_install': False, 'path': '/home/sundharvs/nist_slam_ws/src/waypoint_nav', 'symlink_install': False, 'test_result_base': None}
+[1.434s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.450s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.450s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sundharvs/nist_slam_ws/src/waypoint_nav' with build type 'ament_cmake'
+[1.451s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sundharvs/nist_slam_ws/src/waypoint_nav'
+[1.468s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.468s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.468s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.533s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav -- -j8 -l8
+[7.594s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sundharvs/nist_slam_ws/src/waypoint_nav/build/waypoint_nav -- -j8 -l8
+[7.631s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(waypoint_nav)
+[7.648s] Level 1:colcon.colcon_core.environment:checking '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav' for CMake module files
+[7.648s] Level 1:colcon.colcon_core.environment:checking '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav' for CMake config files
+[7.648s] Level 1:colcon.colcon_core.environment:checking '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/bin'
+[7.649s] Level 1:colcon.colcon_core.environment:checking '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/lib/pkgconfig/waypoint_nav.pc'
+[7.649s] Level 1:colcon.colcon_core.environment:checking '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/lib/python3.10/site-packages'
+[7.649s] Level 1:colcon.colcon_core.environment:checking '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/bin'
+[7.665s] INFO:colcon.colcon_core.shell:Creating package script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.ps1'
+[7.666s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.dsv'
+[7.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.sh'
+[7.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.bash'
+[7.668s] INFO:colcon.colcon_core.shell:Creating package script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/waypoint_nav/package.zsh'
+[7.669s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/waypoint_nav/share/colcon-core/packages/waypoint_nav)
+[7.679s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.679s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.680s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[7.680s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.704s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.704s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.704s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.714s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.730s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/local_setup.ps1'
+[7.731s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/_local_setup_util_ps1.py'
+[7.732s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/setup.ps1'
+[7.750s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/local_setup.sh'
+[7.750s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/_local_setup_util_sh.py'
+[7.750s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/setup.sh'
+[7.769s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/local_setup.bash'
+[7.769s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/setup.bash'
+[7.787s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/local_setup.zsh'
+[7.787s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sundharvs/nist_slam_ws/src/waypoint_nav/install/setup.zsh'

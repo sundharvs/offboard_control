@@ -4,6 +4,8 @@
 #include <px4_msgs/msg/vehicle_command.hpp>
 #include <px4_msgs/msg/vehicle_control_mode.hpp>
 #include <px4_msgs/msg/vehicle_odometry.hpp>
+#include <px4_msgs/msg/timesync_status.hpp>
+
 
 #include <geometry_msgs/msg/pose_stamped.hpp>
 #include <geometry_msgs/msg/transform_stamped.hpp>
@@ -39,10 +41,15 @@ class WaypointNav : public rclcpp::Node
             trajectory_setpoint_publisher_ = this->create_publisher<TrajectorySetpoint>("/fmu/in/trajectory_setpoint", 10);
             vehicle_command_publisher_ = this->create_publisher<VehicleCommand>("/fmu/in/vehicle_command", 10);
 			odometry_publisher_ = this->create_publisher<VehicleOdometry>("/fmu/in/vehicle_visual_odometry", 10);
+			
 			goal_subscription_ = this->create_subscription<geometry_msgs::msg::PoseStamped>("/goal_pose",10,std::bind(&WaypointNav::goal_callback, this, _1));
 			lidar_odom_subscription_ = this->create_subscription<nav_msgs::msg::Odometry>("/odometry/imu",
 				rclcpp::QoS(rclcpp::KeepLast(1)).best_effort().durability_volatile(),
 				std::bind(&WaypointNav::lidar_pose_callback, this, _1)
+			);
+			timesync_subscription_ = this->create_subscription<TimesyncStatus>("/fmu/out/timesync_status",
+				rclcpp::QoS(rclcpp::KeepLast(1)).best_effort().transient_local(),
+				std::bind(&WaypointNav::timesync_callback, this, _1)
 			);
 
             offboard_setpoint_counter_ = 0;
@@ -81,11 +88,12 @@ class WaypointNav : public rclcpp::Node
 		
 		rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr goal_subscription_;
 		rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr lidar_odom_subscription_;
+		rclcpp::Subscription<TimesyncStatus>::SharedPtr timesync_subscription_;
 
 		// std::unique_ptr<tf2_ros::Buffer> tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
 		// std::shared_ptr<tf2_ros::TransformListener> tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
 
-        std::atomic<uint64_t> timestamp_;   //!< common synced timestamped
+        std::atomic<uint64_t> timesync = 0;   //!< common synced timestamped
 
         uint64_t offboard_setpoint_counter_;   //!< counter for the number of setpoints sent
 
@@ -94,6 +102,7 @@ class WaypointNav : public rclcpp::Node
         void publish_vehicle_command(uint16_t command, float param1 = 0.0, float param2 = 0.0);
 		void goal_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg);
 		void lidar_pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
+		void timesync_callback(const TimesyncStatus::SharedPtr msg);
 
 		std::array<float,3> waypoint_pos = {0,0,-0.6};
 		float waypoint_yaw;
@@ -142,6 +151,7 @@ void WaypointNav::publish_trajectory_setpoint()
 	msg.position = waypoint_pos;
 	msg.yaw = waypoint_yaw; // [-PI:PI]
 	msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
+	// msg.timestamp = timesync;
 	trajectory_setpoint_publisher_->publish(msg);
 }
 
@@ -168,60 +178,39 @@ void WaypointNav::publish_vehicle_command(uint16_t command, float param1, float 
 
 void WaypointNav::goal_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg)
 {
-	waypoint_pos = {msg->pose.position.y, msg->pose.position.x, -0.6};
+	waypoint_pos = {(float) msg->pose.position.x, (float) -(msg->pose.position.y), -0.6};
 }
 
 void WaypointNav::lidar_pose_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 {
-	// geometry_msgs::msg::TransformStamped t = tf_buffer_->lookupTransform("lidar_link", "odom",tf2::TimePointZero);
-
 	VehicleOdometry odom_msg;
 
+	odom_msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
+	// odom_msg.timestamp = timesync;
+	// odom_msg.timestamp_sample = timesync;
+
 	odom_msg.pose_frame = 2; // 1 for NED earth-fixed frame, 2 for FRD world-fixed frame
+	odom_msg.position = {(float) msg->pose.pose.position.x, (float) -(msg->pose.pose.position.y), (float) -(msg->pose.pose.position.z)};
+	odom_msg.q = {(float) msg->pose.pose.orientation.w, (float) msg->pose.pose.orientation.x, (float) -(msg->pose.pose.orientation.y), (float) -(msg->pose.pose.orientation.z)};
 
-	// odom_msg.position = {t.transform.translation.y, t.transform.translation.x, -(t.transform.translation.z)};
-	odom_msg.position = {msg->pose.pose.position.y, msg->pose.pose.position.x, -(msg->pose.pose.position.z)};
-
-	Eigen::Quaternionf q2(msg->pose.pose.orientation.x, msg->pose.pose.orientation.y, msg->pose.pose.orientation.z, msg->pose.pose.orientation.w);
-	// tf2::Matrix3x3 m(q2);
-
-	Eigen::Matrix3f m1;
-	m1(0,1) = 1;
-	m1(1,0) = -1;
-	m1(2,2) = -1;
-
-	Eigen::Matrix3f m3;
-	m3(0,0) = 1;
-	m3(1,1) = -1;
-	m3(2,2) = -1;
-
-	Eigen::Quaternionf q1(m1);
-	Eigen::Quaternionf q3(m3);
-	
-	Eigen::Quaternionf q = q1*q2*q3;
-	
-	// double roll, pitch, yaw;
-	// m.getRPY(roll, pitch, yaw);
-	// q.setRPY(roll-0.34906585, pitch, yaw); // UNCOMMENT THIS FOR REAL LIFE
-
-	// odom_msg.q = {t.transform.rotation.w, -(t.transform.rotation.z;), t.transform.rotation.x, -(t.transform.rotation.y)};
-	std::array<float, 4> q_array = {q.x(),q.y(),q.z(),q.w()};
-	odom_msg.q = q_array;
-
-	odom_msg.velocity_frame = 1;
-	odom_msg.velocity = {msg->twist.twist.linear.y, msg->twist.twist.linear.x, -(msg->twist.twist.linear.z)};
-	odom_msg.angular_velocity = {msg->twist.twist.angular.y, msg->twist.twist.angular.x, -(msg->twist.twist.angular.z)}; // in body-fixed frame (rad/s)
+	odom_msg.velocity_frame = 2;
+	odom_msg.velocity = {(float) msg->twist.twist.linear.x,(float) -(msg->twist.twist.linear.y),(float) -(msg->twist.twist.linear.z)};
+	odom_msg.angular_velocity = {(float) msg->twist.twist.angular.x, (float) -(msg->twist.twist.angular.y), (float) -(msg->twist.twist.angular.z)}; // in body-fixed frame (rad/s)
 
 	odom_msg.position_variance = {0.0, 0.0, 0.0};
 	odom_msg.orientation_variance = {0.0, 0.0, 0.0};
 	odom_msg.velocity_variance = {0.0, 0.0, 0.0};
 
-	odom_msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
 	odometry_publisher_->publish(odom_msg);
 
 	if(fabs(waypoint_pos[0] - odom_msg.position[0]) > 0.5){
 		waypoint_yaw = atan2(waypoint_pos[1] - odom_msg.position[1], waypoint_pos[0] - odom_msg.position[0]);
 	}
+}
+
+void WaypointNav::timesync_callback(const TimesyncStatus::SharedPtr msg)
+{
+	timesync = msg->timestamp;
 }
 
 int main(int argc, char *argv[])
