@@ -149,7 +149,7 @@ void WaypointNav::publish_trajectory_setpoint()
 {
 	TrajectorySetpoint msg{};
 	msg.position = waypoint_pos;
-	msg.yaw = waypoint_yaw; // [-PI:PI]
+	// msg.yaw = waypoint_yaw; // [-PI:PI]
 	msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
 	// msg.timestamp = timesync;
 	trajectory_setpoint_publisher_->publish(msg);
